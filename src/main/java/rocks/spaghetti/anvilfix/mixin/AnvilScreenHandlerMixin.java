@@ -39,4 +39,15 @@ public abstract class AnvilScreenHandlerMixin {
         }
         return this.levelCost;
     }
+
+    @Redirect(
+            method = "updateResult",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/enchantment/Enchantment;canCombine(Lnet/minecraft/enchantment/Enchantment;)Z"
+            )
+    )
+    private boolean modifyCanCombine(Enchantment instance, Enchantment other) {
+        return true;
+    }
 }

@@ -4,8 +4,7 @@
   "package": "rocks.spaghetti.anvilfix.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "AnvilScreenHandlerMixin",
-    "EnchantmentMixin"
+    "AnvilScreenHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
